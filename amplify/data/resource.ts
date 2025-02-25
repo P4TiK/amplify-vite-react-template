@@ -10,6 +10,13 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
+      team: a.integer(),
+      point: a.integer(),
+    }).authorization(allow => [allow.owner()]),
+  TotalScore: a
+    .model({
+      team: a.integer(),
+      score: a.integer(),
     }).authorization(allow => [allow.owner()]),
 });
 
