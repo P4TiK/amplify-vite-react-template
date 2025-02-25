@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import React from "react";
 
 const client = generateClient<Schema>();
-interface Props {}
-
 
 function App() {
   const { user, signOut } = useAuthenticator();
   const [points, setPointRecord] = useState<Array<Schema["PointRecord"]["type"]>>([]);
+  interface Props {}
 
   useEffect(() => {
     client.models.PointRecord.observeQuery().subscribe({
@@ -67,34 +67,34 @@ function App() {
     client.models.PointRecord.delete({ id })
   }
 
-  function Test() {
+const MyComponent: React.FC<Props> = (props) => {
 	return (
 		<div className="contain">
 			<div className="scroll-view">
-				<span className="text" >
+				<span className="text">
 					{"에브라임 청년부 2025 겨울수련회\n현재 순위를 확인하세요!"}
 				</span>
 				<div className="column">
 					<div className="column2">
 						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/91cosp6j.png"} 
+							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/91cosp6j.png"}
 							className="image"
 						/>
 						<div className="row-view">
 							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/qvnam15m.png"} 
+								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/qvnam15m.png"}
 								className="image2"
 							/>
-							<span className="text2" >
+							<span className="text2">
 								{"팀이름 1"}
 							</span>
 							<div className="column3">
 								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/bovj99ps.png"} 
+									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/bovj99ps.png"}
 									className="image3"
 								/>
 								<div className="absolute-view">
-									<span className="text3" >
+									<span className="text3">
 										{"0"}
 									</span>
 								</div>
@@ -102,19 +102,19 @@ function App() {
 						</div>
 						<div className="row-view2">
 							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/rw8ip4wv.png"} 
+								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/rw8ip4wv.png"}
 								className="image2"
 							/>
-							<span className="text4" >
+							<span className="text4">
 								{"팀이름 2"}
 							</span>
 							<div className="column3">
 								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/dwwmflso.png"} 
+									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/dwwmflso.png"}
 									className="image3"
 								/>
 								<div className="absolute-view">
-									<span className="text3" >
+									<span className="text3">
 										{"0"}
 									</span>
 								</div>
@@ -122,19 +122,19 @@ function App() {
 						</div>
 						<div className="row-view3">
 							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/vxfkmnc8.png"} 
+								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/vxfkmnc8.png"}
 								className="image4"
 							/>
-							<span className="text4" >
+							<span className="text4">
 								{"팀이름 3"}
 							</span>
 							<div className="column4">
 								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/g1xpm361.png"} 
+									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/g1xpm361.png"}
 									className="image3"
 								/>
 								<div className="absolute-view">
-									<span className="text3" >
+									<span className="text3">
 										{"0"}
 									</span>
 								</div>
@@ -142,29 +142,29 @@ function App() {
 						</div>
 					</div>
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/onb0yxrp.png"} 
+						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/onb0yxrp.png"}
 						className="absolute-image"
 					/>
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/etwgey73.png"} 
+						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/etwgey73.png"}
 						className="absolute-image2"
 					/>
 				</div>
 				<div className="row-view4">
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/fjijukcq.png"} 
+						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/fjijukcq.png"}
 						className="image2"
 					/>
-					<span className="text4" >
+					<span className="text4">
 						{"팀이름 4"}
 					</span>
 					<div className="column5">
 						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/67szujcm.png"} 
+							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/67szujcm.png"}
 							className="image3"
 						/>
 						<div className="absolute-view">
-							<span className="text3" >
+							<span className="text3">
 								{"0"}
 							</span>
 						</div>
@@ -172,19 +172,19 @@ function App() {
 				</div>
 				<div className="row-view4">
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/hfzea2no.png"} 
+						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/hfzea2no.png"}
 						className="image2"
 					/>
-					<span className="text4" >
+					<span className="text4">
 						{"팀이름 5"}
 					</span>
 					<div className="column6">
 						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/vi8b0kat.png"} 
+							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/vi8b0kat.png"}
 							className="image3"
 						/>
 						<div className="absolute-view">
-							<span className="text3" >
+							<span className="text3">
 								{"0"}
 							</span>
 						</div>
@@ -192,37 +192,37 @@ function App() {
 				</div>
 				<div className="row-view5">
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/0bb7cf4i.png"} 
+						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/0bb7cf4i.png"}
 						className="image2"
 					/>
-					<span className="text4" >
+					<span className="text4">
 						{"팀이름 6"}
 					</span>
 					<div className="column7">
 						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/2hvlq3so.png"} 
+							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/bM5l6dsVrS/2hvlq3so.png"}
 							className="image3"
 						/>
 						<div className="absolute-view">
-							<span className="text3" >
+							<span className="text3">
 								{"0"}
 							</span>
 						</div>
 					</div>
 				</div>
 				<div className="view">
-					<span className="text5" >
+					<span className="text5">
 						{"Copyright © 2025 PATIKLAB."}
 					</span>
 				</div>
 			</div>
 		</div>
-	)
-  }
+	);
+};
 
   return (
     <main>
-		<Test />
+	<MyComponent/>
       <h1>{user?.signInDetails?.loginId}'s todos</h1>
       <button onClick={addPointTeam1}>TEAM 1 점수 추가</button>
       <button onClick={addPointTeam2}>TEAM 2 점수 추가</button>
