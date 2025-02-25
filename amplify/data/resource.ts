@@ -15,7 +15,8 @@ const schema = a.schema({
     }).authorization(allow => [allow.owner()]),
   TotalScore: a
     .model({
-      team: a.integer(),
+      teamNum: a.integer(),
+      teamName: a.string(),
       score: a.integer(),
     }).authorization(allow => [allow.owner()]),
 });

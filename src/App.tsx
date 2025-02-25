@@ -19,7 +19,7 @@ function App() {
     client.models.PointRecord.create({ 
       team: 1,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
   
@@ -27,28 +27,28 @@ function App() {
     client.models.PointRecord.create({ 
       team: 2,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
   function addPointTeam3() {
     client.models.PointRecord.create({
       team: 3,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
   function addPointTeam4() {
     client.models.PointRecord.create({
       team: 4,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
   function addPointTeam5() {
     client.models.PointRecord.create({ 
       team: 5,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
 
@@ -56,7 +56,7 @@ function App() {
     client.models.PointRecord.create({ 
       team: 6,
       content: window.prompt("점수 획득 내용을 작성해주세요"),
-      point: window.Number(),
+      point: Number(window.prompt("점수를 입력해주세요")),
      });
   }
 
