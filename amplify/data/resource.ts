@@ -7,7 +7,7 @@ specifies that any user authenticated via an API key can "create", "read",
 "update", and "delete" any "Todo" records.
 =========================================================================*/
 const schema = a.schema({
-  Todo: a
+  PointRecord: a
     .model({
       content: a.string(),
       team: a.integer(),
